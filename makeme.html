@@ -6,6 +6,13 @@
 </head>
 <body>
   <h3>자스로 만드는 무언가</h3>
+
+<ol type="1">
+  <li>주스(Juice)</li>
+  <ol>
+    <li>딸기주스(1500원)</li>
+    <li>포도주스(1200원)</li>
+  </ol>
   <hr>
   <script>
   var price = 0;
@@ -19,6 +26,9 @@
     break;
     case "Milk Coffee" :
     case "커피우유" : price = 1300;
+    break;
+    case "Green Tea":
+    case "녹차" : price = 1000;
     break;
     default:
     document.write(menu + "는 없는 매뉴입니다 :( ");
