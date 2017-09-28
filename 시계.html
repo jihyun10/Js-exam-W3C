@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Real - time Clock</title>
+  <style>
+  #seconds{
+    font-size: 30px;
+    font-family: fantasy;
+  }
+  </style>
+</head>
+<body>
+  <h3>시계</h3>
+  <hr>
+  <script>
+  setInterval("dpTime()",1000);
+     function dpTime(){
+        var now = new Date();
+         hours = now.getHours();
+         minutes = now.getMinutes();
+         seconds = now.getSeconds();
+
+         if (hours > 12){
+             hours -= 12;
+         ampm = "오후 ";
+         }else{
+             ampm = "오전 ";
+         }
+         if (hours < 10){
+             hours = "0" + hours;
+         }
+         if (minutes < 10){
+             minutes = "0" + minutes;
+         }
+         if (seconds < 10){
+             seconds = "0" + seconds;
+         }
+ document.getElementById("dpTime").innerHTML = ampm + "<br>" + seconds + "<br>" + hours + "<br>" + minutes;
+     }
+</script>
+<div id="seconds">
+  <span id="dpTime">
+
+  </span>
+</div>
+</body>
+</html>
