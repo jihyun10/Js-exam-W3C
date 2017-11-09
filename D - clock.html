@@ -15,6 +15,16 @@
 function GetTime() {
   var dt = new Date() ;
   document.clock.local.value = IfZero(dt.getHours()) + ":" + IfZero(dt.gerMinutes());
-  
+  setTimeout("GetTime()",1000);
+  curTime = (IfZero(dt.getHours()) + ":" + IfZero(dt.gerMinutes()));
+}
 
+function IfZero(num)
+{
+  return ((num <= 9) ? ("0" + num) : num);
+}
+
+function alarmSet() {
+  hourNum = document.clock.hourOpt[document.clock.hourOpt.selectedIndex].value;
+  
 }
