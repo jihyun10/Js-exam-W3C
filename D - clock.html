@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>알람시계</title>
+</head>
+<body>
+  <script>
+  var alarmTime;
+  var curTime;
+  var check = new Date();
+  var hourNum;
+  var minNum;
+
+function GetTime() {
+  var dt = new Date() ;
+  document.clock.local.value = IfZero(dt.getHours()) + ":" + IfZero(dt.gerMinutes());
+  
+
+}
